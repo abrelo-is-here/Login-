@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Job Application Registration Form</h1>
+        <p>Make Sure to fill out all fields to register!</p>
+
+        <!--Form-->
+        <form id="registrationForm">
+            <!-- Full Name -->
+            <div class="input-field">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="ex: Abreham Solomon" required>
+               
+            </div>
+
+            <!-- Email Address -->
+            <div class="input-field">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="ex: abreloishere@gmail.com" required>
+                
+            </div>
+
+            <!-- Phone Number -->
+            <div class="input-field">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="ex: 0981889399" required>
+            </div>
+
+            <!-- Current Position -->
+            <div class="input-field">
+                <label for="currentPosition">Current Position:</label>
+                <input type="text" id="currentPosition" name="currentPosition" placeholder="ex: Manager"  required>
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="input-field">
+                <label for="resume">Resume Upload:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+            </div>
+
+            <!-- Portfolio URL -->
+            <div class="input-field">
+                <label for="portfolio">Portfolio URL:</label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://myportfolio.com">
+            </div>
+
+            <!-- Password -->
+            <div class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <ul>
+                    <li id="digit">Password Must be 8-15 digits</li>
+                    <li id="char">Password Must include Special Characters @#$%^&*</li>
+                    <li id="upper">Password Must include   atlist 1 Uppercase Letter</li>
+                    <li id="number">Password Must include  atlist 1 Number</li>
+                    <li id="pp" style="display: none;">Password Don Not Match</li>
+                  
+                </ul>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-field">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <ul>
+                  <li id="cp" style="color: red; display:none;">Password Don Not Match</li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="sub">Register</button>
+        </form>
+    </div>
+
+    <div id="successModal" class="modal">
+      
+        <!-- Modal Content -->
+        <div class="modal-content">
+            
+            <h2>Register Succsesfully ✅</h2> <br><br><br>
+            <hr>
+            <button class="close" >Close</button>
+       
+        </div>
+    </div>
+   
+    <script src="rule.js"></script>
+</body>
+</html>
